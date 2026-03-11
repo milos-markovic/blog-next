@@ -14,6 +14,21 @@ pnpm dev
 bun dev
 ```
 
+To start project on localhost do next
+
+1. Run command in terminal: openssl rand -base64 32
+   to create "your_secret_key"
+
+2. Create .env.local file in root of project and insert in that file this
+   SESSION_SECRET=your_secret_key
+
+3. insert this line in .env.local 
+   MONGODB_URI=mongodb://127.0.0.1:27017/your-db-name
+
+4. run command "npm run seed" in terminal
+
+5. run command in teminal "npm run dev" to start server on localhost
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
